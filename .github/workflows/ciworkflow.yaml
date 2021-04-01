@@ -24,7 +24,7 @@ jobs:
       - name: upload artefact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: Testos
+          appName: alexkrl/Testos
           token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: app/build/outputs/apk/release/app-release-unsigned.apk
