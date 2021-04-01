@@ -35,7 +35,7 @@ jobs:
           group: Collaborators
           file: app/build/outputs/apk/release/app-release-unsigned.apk
           notifyTesters: false
-          debug: false
+          debug: true
 
 #      - uses: actions/upload-artifact@master
 #        with:
