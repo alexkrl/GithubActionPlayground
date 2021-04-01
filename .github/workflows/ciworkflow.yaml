@@ -30,8 +30,8 @@ jobs:
       - name: upload artefact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: wzieba/Sample-App
-          token: e4562d58e33f35e0a2108f634a930776e415d772
+          appName: Testos
+          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Testers
           file: app/build/outputs/apk/release/app-release-unsigned.apk
           notifyTesters: false
