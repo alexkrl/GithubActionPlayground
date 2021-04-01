@@ -21,15 +21,15 @@ jobs:
         with:
           path: app/build/outputs/apk/release/*.apk
 
-#      - name: upload artefact to App Center
-#        uses: wzieba/AppCenter-Github-Action@v1
-#        with:
-#          appName: wzieba/Sample-App
-#          token: e4562d58e33f35e0a2108f634a930776e415d772
-#          group: Testers
-#          file: app/build/outputs/apk/prod/release/*.apk
-#          notifyTesters: false
-#          debug: false
+      - name: upload artefact to App Center
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: wzieba/Sample-App
+          token: e4562d58e33f35e0a2108f634a930776e415d772
+          group: Testers
+          file: app/build/outputs/apk/release/app-release-unsigned.apk
+          notifyTesters: false
+          debug: false
 
 #      - uses: actions/upload-artifact@master
 #        with:
