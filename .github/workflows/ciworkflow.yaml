@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Get sample .apk for test purposes
-        run: wget --output-document ApiDemos-debug.apk https://github.com/appium/appium/blob/906350fd335f9485376214fdd17c7cdb6c9ff26b/sample-code/apps/ApiDemos-debug.apk?raw=true
+        run: wget --output-document ApiDemos-debug.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/app-debug.apk?raw=true
       - name: Upload artifact with provided release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
