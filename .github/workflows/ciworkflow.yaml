@@ -34,7 +34,7 @@ jobs:
 
 
       - name: App Center Distribute
-        uses: devussy/AppCenter-Distribute-Github-Action@v1.0.5
+        uses: devussy/AppCenter-Distribute-Github-Action@v1.0.2
         with:
           app: Testos
           token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
