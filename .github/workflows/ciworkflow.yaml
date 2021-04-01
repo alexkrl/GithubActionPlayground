@@ -1,35 +1,35 @@
-name : "Development "
-on:
-  push:
-    branches: [ master ]
-    
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
-
-      - name: Generate Release APK
-        run: ./gradlew assembleDebug
-
-      - uses: actions/upload-artifact@master
-        with:
-          path: app/build/outputs/apk/debug/*.apk
-
-      - name: upload artefact to App Center
-        uses: wzieba/AppCenter-Github-Action@v1
-        with:
-          appName: alexkrl/Testos
-          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
-          group: Collaborators
-          file: app/build/outputs/apk/release/app-release-unsigned.apk
-          notifyTesters: false
-          debug: true
+#name : "Development "
+#on:
+#  push:
+#    branches: [ master ]
+#
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#
+#      - name: Checkout code
+#        uses: actions/checkout@v2
+#
+#      - name: Make gradlew executable
+#        run: chmod +x ./gradlew
+#
+#      - name: Generate Release APK
+#        run: ./gradlew assembleDebug
+#
+#      - uses: actions/upload-artifact@master
+#        with:
+#          path: app/build/outputs/apk/debug/*.apk
+#
+#      - name: upload artefact to App Center
+#        uses: wzieba/AppCenter-Github-Action@v1
+#        with:
+#          appName: alexkrl/Testos
+#          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
+#          group: Collaborators
+#          file: app/build/outputs/apk/release/app-release-unsigned.apk
+#          notifyTesters: false
+#          debug: true
 
 
 
