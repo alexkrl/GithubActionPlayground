@@ -32,7 +32,7 @@ jobs:
         with:
           appName: Testos
           token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
-          group: Testers
+          group: Collaborators
           file: app/build/outputs/apk/release/app-release-unsigned.apk
           notifyTesters: false
           debug: false
