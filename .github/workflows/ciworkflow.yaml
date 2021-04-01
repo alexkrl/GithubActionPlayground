@@ -13,39 +13,39 @@ jobs:
       - name: Upload artifact with provided release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: ${{secrets.APP_NAME}}
-          token: ${{secrets.API_TOKEN}}
+          appName: Testos
+          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
           releaseNotes: New bugs
       - name: Upload artifact with empty release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: ${{secrets.APP_NAME}}
-          token: ${{secrets.API_TOKEN}}
+          appName: Testos
+          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
       - name: Upload artifact with Git generated release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: ${{secrets.APP_NAME}}
-          token: ${{secrets.API_TOKEN}}
+          appName: Testos
+          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
           gitReleaseNotes: true
       - name: Upload artifact and notify testers
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: ${{secrets.APP_NAME}}
-          token: ${{secrets.API_TOKEN}}
+          appName: Testos
+          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
           notifyTesters: true
       - name: Upload artifact with a debug flag
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: ${{secrets.APP_NAME}}
-          token: ${{secrets.API_TOKEN}}
+          appName: Testos
+          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
           debug: true
