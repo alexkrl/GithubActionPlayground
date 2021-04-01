@@ -15,11 +15,11 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Generate Release APK
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleDebug
 
       - uses: actions/upload-artifact@master
         with:
-          path: app/build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/debug/*.apk
 
 #      - name: run any App Center CLI command
 #        uses: joabalea/App-Center-action@v1.0.2
@@ -31,10 +31,10 @@ jobs:
       - name: App Center Distribute
         uses: devussy/AppCenter-Distribute-Github-Action@v1.0.2
         with:
-          app: Testos
+          app : Testos
           token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
-          file: app/build/outputs/apk/release/app-release-unsigned.apk
+          file: app/build/outputs/apk/debug/app-debug.apk
           silent: true
 
 
