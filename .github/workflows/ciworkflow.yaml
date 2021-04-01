@@ -19,7 +19,7 @@ jobs:
 
       - uses: actions/upload-artifact@master
         with:
-          path: app/build/outputs/apk/prod/release/*.apk
+          path: app/build/outputs/apk/release/*.apk
 
 #      - name: upload artefact to App Center
 #        uses: wzieba/AppCenter-Github-Action@v1
