@@ -6,32 +6,78 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-
-#      - name: Checkout code
-#        uses: actions/checkout@v2
-
-#      - name: Make gradlew executable
-#        run: chmod +x ./gradlew
-#
-#      - name: Generate Release APK
-#        run: ./gradlew assembleDebug
-
-#      - uses: actions/upload-artifact@master
-#        with:
-#          path: app/build/outputs/apk/debug/*.apk
       - name: Get sample .apk for test purposes
-        run: wget --output-document ApiDemos-debug.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/app-debug.apk?raw=true
-
-      - name: upload artefact to App Center
+        run: wget --output-document ApiDemos-debug.apk https://github.com/appium/appium/blob/906350fd335f9485376214fdd17c7cdb6c9ff26b/sample-code/apps/ApiDemos-debug.apk?raw=true
+      - name: Upload artifact with provided release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: Testos
-          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
+          appName: ${{secrets.APP_NAME}}
+          token: ${{secrets.API_TOKEN}}
           group: Collaborators
           file: ApiDemos-debug.apk
-          notifyTesters: false
+          releaseNotes: New bugs
+      - name: Upload artifact with empty release notes
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: ${{secrets.APP_NAME}}
+          token: ${{secrets.API_TOKEN}}
+          group: Collaborators
+          file: ApiDemos-debug.apk
+      - name: Upload artifact with Git generated release notes
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: ${{secrets.APP_NAME}}
+          token: ${{secrets.API_TOKEN}}
+          group: Collaborators
+          file: ApiDemos-debug.apk
+          gitReleaseNotes: true
+      - name: Upload artifact and notify testers
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: ${{secrets.APP_NAME}}
+          token: ${{secrets.API_TOKEN}}
+          group: Collaborators
+          file: ApiDemos-debug.apk
+          notifyTesters: true
+      - name: Upload artifact with a debug flag
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: ${{secrets.APP_NAME}}
+          token: ${{secrets.API_TOKEN}}
+          group: Collaborators
+          file: ApiDemos-debug.apk
           debug: true
+
+
+
+#    steps:
+#
+##      - name: Checkout code
+##        uses: actions/checkout@v2
+#
+##      - name: Make gradlew executable
+##        run: chmod +x ./gradlew
+##
+##      - name: Generate Release APK
+##        run: ./gradlew assembleDebug
+#
+##      - uses: actions/upload-artifact@master
+##        with:
+##          path: app/build/outputs/apk/debug/*.apk
+#      - name: Get sample .apk for test purposes
+#        run: wget --output-document ApiDemos-debug.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/app-debug.apk?raw=true
+#
+#      - name: upload artefact to App Center
+#        uses: wzieba/AppCenter-Github-Action@v1
+#        with:
+#          appName: Testos
+#          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
+#          group: Collaborators
+#          file: ApiDemos-debug.apk
+#          notifyTesters: false
+#          debug: true
 
 
 
