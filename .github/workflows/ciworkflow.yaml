@@ -23,6 +23,9 @@ jobs:
       - name: Get sample .apk for test purposes
         run: wget --output-document texel.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/src/main/java/com/example/githubactionplayground/textl.apk?raw=true
 
+      - name: Bump Version
+        uses: opspresso/action-version@master
+
       - name: upload artefact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
