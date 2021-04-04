@@ -29,7 +29,7 @@ jobs:
         uses: wzieba/AppCenter-Github-Action@v1
         with:
           appName: alexTexel/GithubActionPlayground
-          token: c9fcddd890841b8a22618cdee283d8748a09283f
+          token: ecb75ecc53b028d374f80f0b0e4dede73025c799
           group: Collaborators
           file: ApiDemos-debug.apk
           notifyTesters: false
