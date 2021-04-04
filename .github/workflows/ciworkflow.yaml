@@ -20,7 +20,6 @@ jobs:
 #      - uses: actions/upload-artifact@master
 #        with:
 #          path: app/build/outputs/apk/prod/release/texel.apk
-      -
       - name: Get sample .apk for test purposes
         run: wget --output-document texel.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/texel.apk?raw=true
 
