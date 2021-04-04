@@ -6,34 +6,65 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-#    steps:
+
+#      - name: Checkout code
+#        uses: actions/checkout@v2
 #
-##      - name: Checkout code
-##        uses: actions/checkout@v2
+#      - name: Make gradlew executable
+#        run: chmod +x ./gradlew
 #
-##      - name: Make gradlew executable
-##        run: chmod +x ./gradlew
-##
-##      - name: Generate Release APK
-##        run: ./gradlew assembleDebug
+#      - name: Generate Release APK
+#        run: ./gradlew assembleProdRelease
 #
-##      - uses: actions/upload-artifact@master
-##        with:
-##          path: app/build/outputs/apk/debug/*.apk
+#      - uses: actions/upload-artifact@master
+#        with:
+#          path: app/build/outputs/apk/prod/release/texel.apk
+      -
       - name: Get sample .apk for test purposes
-        run: wget --output-document app-release.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/release/app-release.apk?raw=true
-#
+        run: wget --output-document texel.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/texel.apk?raw=true
+
       - name: upload artefact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: alexTexel/GithubActionPlayground
-          token: ecb75ecc53b028d374f80f0b0e4dede73025c799
+          appName: alexTexel/Texel
+          token: e2efaa716ff06c9f11af12cf4c41b98cca029968
           group: Collaborators
-          file: app-release.apk
+          file: texel.apk
           notifyTesters: false
           debug: false
+
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+##    steps:
+##
+###      - name: Checkout code
+###        uses: actions/checkout@v2
+##
+###      - name: Make gradlew executable
+###        run: chmod +x ./gradlew
+###
+###      - name: Generate Release APK
+###        run: ./gradlew assembleDebug
+##
+###      - uses: actions/upload-artifact@master
+###        with:
+###          path: app/build/outputs/apk/debug/*.apk
+#      - name: Get sample .apk for test purposes
+#        run: wget --output-document app-release.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/release/app-release.apk?raw=true
+##
+#      - name: upload artefact to App Center
+#        uses: wzieba/AppCenter-Github-Action@v1
+#        with:
+#          appName: alexTexel/GithubActionPlayground
+#          token: ecb75ecc53b028d374f80f0b0e4dede73025c799
+#          group: Collaborators
+#          file: app-release.apk
+#          notifyTesters: false
+#          debug: false
 
 
 

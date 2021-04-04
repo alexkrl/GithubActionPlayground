@@ -27,21 +27,21 @@ android {
         }
     }
 
-    signingConfigs {
-        val password = "alexalex"
-        getByName("debug") {
-            keyAlias = "muser"
-            keyPassword = password
-            storeFile = file("kstore.jks")
-            storePassword = password
-        }
-        create("release") {
-            keyAlias = "muser"
-            keyPassword = password
-            storeFile = file("kstore.jks")
-            storePassword = password
-        }
-    }
+//    signingConfigs {
+//        val password = "alexalex"
+//        getByName("debug") {
+//            keyAlias = "muser"
+//            keyPassword = password
+//            storeFile = file("kstore.jks")
+//            storePassword = password
+//        }
+//        create("release") {
+//            keyAlias = "muser"
+//            keyPassword = password
+//            storeFile = file("kstore.jks")
+//            storePassword = password
+//        }
+//    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
