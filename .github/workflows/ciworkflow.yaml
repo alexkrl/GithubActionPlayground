@@ -21,7 +21,7 @@ jobs:
 #        with:
 #          path: app/build/outputs/apk/prod/release/texel.apk
       - name: Get sample .apk for test purposes
-        run: wget --output-document texel.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/texel.apk?raw=true
+        run: wget --output-document texel.apk https://github.com/alexkrl/GithubActionPlayground/blob/master/app/src/main/java/com/example/githubactionplayground/textl.apk?raw=true
 
       - name: upload artefact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
