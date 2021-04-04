@@ -26,7 +26,7 @@ jobs:
       - name: upload artefact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: alexTexel/Texel
+          appName: Alexander-texel.live/Texel
           token: e2efaa716ff06c9f11af12cf4c41b98cca029968
           group: Collaborators
           file: texel.apk
