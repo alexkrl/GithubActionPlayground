@@ -33,7 +33,7 @@ jobs:
           group: Collaborators
           file: app-release.apk
           notifyTesters: false
-          debug: true
+          debug: false
 
 
 
