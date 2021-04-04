@@ -30,7 +30,7 @@ jobs:
         uses: wzieba/AppCenter-Github-Action@v1
         with:
           appName: Alexander-texel.live/Texel
-          token: e2efaa716ff06c9f11af12cf4c41b98cca029968
+          token: fb026325abb32fe5f1476fc0b4857fe6b4b7122d
           group: Collaborators
           file: texel.apk
           notifyTesters: false
