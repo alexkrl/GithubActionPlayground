@@ -13,7 +13,7 @@ jobs:
       - name: Upload artifact with provided release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: GithubActionPlayground
+          appName: alexTexel/GithubActionPlayground
           token: 3fc8d2eb9ad87af19492423000da0c2309b7b8f3
           group: Collaborators
           file: ApiDemos-debug.apk
