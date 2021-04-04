@@ -18,6 +18,7 @@ jobs:
           group: Collaborators
           file: ApiDemos-debug.apk
           releaseNotes: New bugs
+          debug: true
       - name: Upload artifact with empty release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
