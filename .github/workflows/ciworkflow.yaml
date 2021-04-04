@@ -13,7 +13,7 @@ jobs:
       - name: Upload artifact with provided release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: Testos
+          appName: com.example.githubactionplayground
           token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
@@ -21,14 +21,14 @@ jobs:
       - name: Upload artifact with empty release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: Testos
+          appName: com.example.githubactionplayground
           token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
       - name: Upload artifact with Git generated release notes
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: Testos
+          appName: com.example.githubactionplayground
           token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact and notify testers
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: Testos
+          appName: com.example.githubactionplayground
           token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
@@ -44,7 +44,7 @@ jobs:
       - name: Upload artifact with a debug flag
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: Testos
+          appName: com.example.githubactionplayground
           token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
           group: Collaborators
           file: ApiDemos-debug.apk
