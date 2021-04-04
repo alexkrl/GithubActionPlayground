@@ -14,7 +14,7 @@ jobs:
         uses: wzieba/AppCenter-Github-Action@v1
         with:
           appName: GithubActionPlayground
-          token: 3dcd32803a093e957c3c1d5dfdfadf317c7d0fd8
+          token: 3fc8d2eb9ad87af19492423000da0c2309b7b8f3
           group: Collaborators
           file: ApiDemos-debug.apk
           releaseNotes: New bugs
